@@ -136903,7 +136903,7 @@ function () {
   }
 
   User.prototype.markerContent = function () {
-    return "<strong>User Name: ".concat(this.firstName, " &nbsp;").concat(this.lastName, "</strong>");
+    return "<strong style=\"color:blue;\">User Name: ".concat(this.firstName, "&nbsp;").concat(this.lastName, "</strong>");
   };
 
   return User;
@@ -136940,7 +136940,7 @@ function () {
   }
 
   Company.prototype.markerContent = function () {
-    return "<div>\n    <h1>Company Name: ".concat(this.companyName, "</h1>\n  <h3>CatchPhrase ").concat(this.catchPhrase, "</h3>\n</div>");
+    return "<div>\n    <h1>Company: ".concat(this.companyName, "</h1>\n  <h3 style=\"color:green;\">CatchPhrase: ").concat(this.catchPhrase, "</h3>\n</div>");
   };
 
   return Company;
@@ -136985,7 +136985,8 @@ function () {
   //     },
   //   });
   // }
-  // diffrente approch to the above two method :
+
+  /*  different approach to the above two method : */
 
 
   CustomMap.prototype.addMarker = function (mappable) {
@@ -137009,7 +137010,7 @@ function () {
   return CustomMap;
 }();
 
-exports.CustomMap = CustomMap; // ###########################
+exports.CustomMap = CustomMap;
 },{}],"src/index.ts":[function(require,module,exports) {
 "use strict";
 
@@ -137021,11 +137022,7 @@ var User_1 = require("./User");
 
 var company_1 = require("./company");
 
-var CustomMap_1 = require("./CustomMap"); // const user = new User();
-// console.log(user);
-// const company = new Company();
-// console.log(company);
-
+var CustomMap_1 = require("./CustomMap");
 
 var user = new User_1.User();
 var company = new company_1.Company();
@@ -137060,7 +137057,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63558" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53643" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

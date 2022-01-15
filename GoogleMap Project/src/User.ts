@@ -24,6 +24,6 @@ export class User implements Mappable {
     };
   }
   markerContent(): string {
-    return `<strong>User Name: ${this.firstName} &nbsp;${this.lastName}</strong>`;
+    return `<strong style="color:blue;">User Name: ${this.firstName}&nbsp;${this.lastName}</strong>`;
   }
 }

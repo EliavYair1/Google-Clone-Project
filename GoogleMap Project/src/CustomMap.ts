@@ -1,5 +1,3 @@
-import { User } from './User';
-import { Company } from './company';
 //instruction to every other class
 //to how they can be an argument to 'addMaker'
 export interface Mappable {
@@ -42,7 +40,7 @@ export class CustomMap {
   //   });
   // }
 
-  // diffrente approch to the above two method :
+  /*  different approach to the above two method : */
   addMarker(mappable: /* User | Company or */ Mappable): void {
     const marker = new google.maps.Marker({
       map: this.googleMap,
@@ -59,5 +57,3 @@ export class CustomMap {
     });
   }
 }
-
-// ###########################
